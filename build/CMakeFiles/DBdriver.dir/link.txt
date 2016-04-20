@@ -1,0 +1,1 @@
+g++   -lpqxx -lpq -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/DBdriver.dir/src/test/testDB.cpp.o CMakeFiles/DBdriver.dir/src/DBdriverpqsql.cpp.o  -o ../bin/DBdriver  

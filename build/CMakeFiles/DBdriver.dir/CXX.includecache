@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lifu/Documents/DBdriver/src/DBdriverpqsql.cpp
+iostream
+-
+DBdriverpqsql.h
+/Users/lifu/Documents/DBdriver/src/DBdriverpqsql.h
+
+/Users/lifu/Documents/DBdriver/src/test/testDB.cpp
+iostream
+-
+DBdriverpqsql.h
+/Users/lifu/Documents/DBdriver/src/test/DBdriverpqsql.h
+
