@@ -6,23 +6,29 @@
 
 #IncludeRegexTransform: 
 
-../include/DBdriverpgsql.h
+../include/DBdriverpq.h
 iostream
--
-pqxx/pqxx
 -
 cstring
 -
+libpq-fe.h
+../include/libpq-fe.h
 
-/Users/lifu/Documents/DBdriver/src/DBdriverpgsql.cpp
+../include/libpq-fe.h
+stdio.h
+-
+postgres_ext.h
+../include/postgres_ext.h
+
+/Users/lifu/Documents/DBdriver/src/DBdriverpq.cpp
 iostream
 -
-DBdriverpgsql.h
-/Users/lifu/Documents/DBdriver/src/DBdriverpgsql.h
+DBdriverpq.h
+/Users/lifu/Documents/DBdriver/src/DBdriverpq.h
 
 /Users/lifu/Documents/DBdriver/src/testDB.cpp
 iostream
 -
-DBdriverpgsql.h
-/Users/lifu/Documents/DBdriver/src/DBdriverpgsql.h
+DBdriverpq.h
+/Users/lifu/Documents/DBdriver/src/DBdriverpq.h
 

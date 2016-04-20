@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DBtest.dir/testDB.cpp.o"
-  "CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o"
+  "CMakeFiles/DBtest.dir/DBdriverpq.cpp.o"
   "../../bin/DBtest.pdb"
   "../../bin/DBtest"
 )

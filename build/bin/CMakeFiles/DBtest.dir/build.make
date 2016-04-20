@@ -81,40 +81,40 @@ bin/CMakeFiles/DBtest.dir/testDB.cpp.o.provides: bin/CMakeFiles/DBtest.dir/testD
 bin/CMakeFiles/DBtest.dir/testDB.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/testDB.cpp.o
 
 
-bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o: bin/CMakeFiles/DBtest.dir/flags.make
-bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o: ../src/DBdriverpgsql.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o"
-	cd /Users/lifu/Documents/DBdriver/build/bin && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o -c /Users/lifu/Documents/DBdriver/src/DBdriverpgsql.cpp
+bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o: bin/CMakeFiles/DBtest.dir/flags.make
+bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o: ../src/DBdriverpq.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBtest.dir/DBdriverpq.cpp.o -c /Users/lifu/Documents/DBdriver/src/DBdriverpq.cpp
 
-bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.i"
-	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lifu/Documents/DBdriver/src/DBdriverpgsql.cpp > CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.i
+bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBtest.dir/DBdriverpq.cpp.i"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lifu/Documents/DBdriver/src/DBdriverpq.cpp > CMakeFiles/DBtest.dir/DBdriverpq.cpp.i
 
-bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.s"
-	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lifu/Documents/DBdriver/src/DBdriverpgsql.cpp -o CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.s
+bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBtest.dir/DBdriverpq.cpp.s"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lifu/Documents/DBdriver/src/DBdriverpq.cpp -o CMakeFiles/DBtest.dir/DBdriverpq.cpp.s
 
-bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o.requires:
+bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.requires:
 
-.PHONY : bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o.requires
+.PHONY : bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.requires
 
-bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o.provides: bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o.requires
-	$(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o.provides.build
-.PHONY : bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o.provides
+bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.provides: bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.provides
 
-bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o
+bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o
 
 
 # Object files for target DBtest
 DBtest_OBJECTS = \
 "CMakeFiles/DBtest.dir/testDB.cpp.o" \
-"CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o"
+"CMakeFiles/DBtest.dir/DBdriverpq.cpp.o"
 
 # External object files for target DBtest
 DBtest_EXTERNAL_OBJECTS =
 
 ../bin/DBtest: bin/CMakeFiles/DBtest.dir/testDB.cpp.o
-../bin/DBtest: bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o
+../bin/DBtest: bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o
 ../bin/DBtest: bin/CMakeFiles/DBtest.dir/build.make
 ../bin/DBtest: bin/CMakeFiles/DBtest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/DBtest"
@@ -126,7 +126,7 @@ bin/CMakeFiles/DBtest.dir/build: ../bin/DBtest
 .PHONY : bin/CMakeFiles/DBtest.dir/build
 
 bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/testDB.cpp.o.requires
-bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o.requires
+bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.requires
 
 .PHONY : bin/CMakeFiles/DBtest.dir/requires
 

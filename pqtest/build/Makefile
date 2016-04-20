@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.4.1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lifu/Documents/DBdriver/systest
+CMAKE_SOURCE_DIR = /Users/lifu/Documents/DBdriver/pqtest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lifu/Documents/DBdriver/systest/build
+CMAKE_BINARY_DIR = /Users/lifu/Documents/DBdriver/pqtest/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lifu/Documents/DBdriver/systest/build/CMakeFiles /Users/lifu/Documents/DBdriver/systest/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lifu/Documents/DBdriver/pqtest/build/CMakeFiles /Users/lifu/Documents/DBdriver/pqtest/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lifu/Documents/DBdriver/systest/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lifu/Documents/DBdriver/pqtest/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named DBtest
+# Target rules for targets named testpq
 
 # Build rule for target.
-DBtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 DBtest
-.PHONY : DBtest
+testpq: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testpq
+.PHONY : testpq
 
 # fast build rule for target.
-DBtest/fast:
-	$(MAKE) -f CMakeFiles/DBtest.dir/build.make CMakeFiles/DBtest.dir/build
-.PHONY : DBtest/fast
+testpq/fast:
+	$(MAKE) -f CMakeFiles/testpq.dir/build.make CMakeFiles/testpq.dir/build
+.PHONY : testpq/fast
 
-test.o: test.cpp.o
+testpq.o: testpq.cpp.o
 
-.PHONY : test.o
+.PHONY : testpq.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) -f CMakeFiles/DBtest.dir/build.make CMakeFiles/DBtest.dir/test.cpp.o
-.PHONY : test.cpp.o
+testpq.cpp.o:
+	$(MAKE) -f CMakeFiles/testpq.dir/build.make CMakeFiles/testpq.dir/testpq.cpp.o
+.PHONY : testpq.cpp.o
 
-test.i: test.cpp.i
+testpq.i: testpq.cpp.i
 
-.PHONY : test.i
+.PHONY : testpq.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) -f CMakeFiles/DBtest.dir/build.make CMakeFiles/DBtest.dir/test.cpp.i
-.PHONY : test.cpp.i
+testpq.cpp.i:
+	$(MAKE) -f CMakeFiles/testpq.dir/build.make CMakeFiles/testpq.dir/testpq.cpp.i
+.PHONY : testpq.cpp.i
 
-test.s: test.cpp.s
+testpq.s: testpq.cpp.s
 
-.PHONY : test.s
+.PHONY : testpq.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) -f CMakeFiles/DBtest.dir/build.make CMakeFiles/DBtest.dir/test.cpp.s
-.PHONY : test.cpp.s
+testpq.cpp.s:
+	$(MAKE) -f CMakeFiles/testpq.dir/build.make CMakeFiles/testpq.dir/testpq.cpp.s
+.PHONY : testpq.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... DBtest"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... testpq"
+	@echo "... testpq.o"
+	@echo "... testpq.i"
+	@echo "... testpq.s"
 .PHONY : help
 
 

@@ -4,7 +4,7 @@ MESSAGE( ${PROJECT_SOURCE_DIR} )
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-add_executable(DBtest testDB.cpp DBdriverpgsql.cpp)
+add_executable(DBtest testDB.cpp DBdriverpq.cpp)
 
 
 

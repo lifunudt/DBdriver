@@ -125,32 +125,32 @@ DBtest/fast:
 	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/build
 .PHONY : DBtest/fast
 
-DBdriverpgsql.o: DBdriverpgsql.cpp.o
+DBdriverpq.o: DBdriverpq.cpp.o
 
-.PHONY : DBdriverpgsql.o
+.PHONY : DBdriverpq.o
 
 # target to build an object file
-DBdriverpgsql.cpp.o:
-	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.o
-.PHONY : DBdriverpgsql.cpp.o
+DBdriverpq.cpp.o:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o
+.PHONY : DBdriverpq.cpp.o
 
-DBdriverpgsql.i: DBdriverpgsql.cpp.i
+DBdriverpq.i: DBdriverpq.cpp.i
 
-.PHONY : DBdriverpgsql.i
+.PHONY : DBdriverpq.i
 
 # target to preprocess a source file
-DBdriverpgsql.cpp.i:
-	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.i
-.PHONY : DBdriverpgsql.cpp.i
+DBdriverpq.cpp.i:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.i
+.PHONY : DBdriverpq.cpp.i
 
-DBdriverpgsql.s: DBdriverpgsql.cpp.s
+DBdriverpq.s: DBdriverpq.cpp.s
 
-.PHONY : DBdriverpgsql.s
+.PHONY : DBdriverpq.s
 
 # target to generate assembly for a file
-DBdriverpgsql.cpp.s:
-	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpgsql.cpp.s
-.PHONY : DBdriverpgsql.cpp.s
+DBdriverpq.cpp.s:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.s
+.PHONY : DBdriverpq.cpp.s
 
 testDB.o: testDB.cpp.o
 
@@ -188,9 +188,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DBtest"
-	@echo "... DBdriverpgsql.o"
-	@echo "... DBdriverpgsql.i"
-	@echo "... DBdriverpgsql.s"
+	@echo "... DBdriverpq.o"
+	@echo "... DBdriverpq.i"
+	@echo "... DBdriverpq.s"
 	@echo "... testDB.o"
 	@echo "... testDB.i"
 	@echo "... testDB.s"

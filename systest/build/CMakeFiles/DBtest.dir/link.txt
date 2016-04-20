@@ -1,1 +1,0 @@
-g++   -lpqxx -lpq -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/DBtest.dir/test.cpp.o  -o ../bin/DBtest  

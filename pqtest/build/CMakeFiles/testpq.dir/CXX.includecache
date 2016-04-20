@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lifu/Documents/DBdriver/include/libpq-fe.h
+stdio.h
+-
+postgres_ext.h
+/Users/lifu/Documents/DBdriver/include/postgres_ext.h
+
+/Users/lifu/Documents/DBdriver/pqtest/testpq.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+libpq-fe.h
+/Users/lifu/Documents/DBdriver/pqtest/libpq-fe.h
+

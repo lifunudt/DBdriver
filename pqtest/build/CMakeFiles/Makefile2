@@ -54,45 +54,45 @@ RM = /usr/local/Cellar/cmake/3.4.1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lifu/Documents/DBdriver/systest
+CMAKE_SOURCE_DIR = /Users/lifu/Documents/DBdriver/pqtest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lifu/Documents/DBdriver/systest/build
+CMAKE_BINARY_DIR = /Users/lifu/Documents/DBdriver/pqtest/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/DBtest.dir
+# Target rules for target CMakeFiles/testpq.dir
 
 # All Build rule for target.
-CMakeFiles/DBtest.dir/all:
-	$(MAKE) -f CMakeFiles/DBtest.dir/build.make CMakeFiles/DBtest.dir/depend
-	$(MAKE) -f CMakeFiles/DBtest.dir/build.make CMakeFiles/DBtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lifu/Documents/DBdriver/systest/build/CMakeFiles --progress-num=1,2 "Built target DBtest"
-.PHONY : CMakeFiles/DBtest.dir/all
+CMakeFiles/testpq.dir/all:
+	$(MAKE) -f CMakeFiles/testpq.dir/build.make CMakeFiles/testpq.dir/depend
+	$(MAKE) -f CMakeFiles/testpq.dir/build.make CMakeFiles/testpq.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lifu/Documents/DBdriver/pqtest/build/CMakeFiles --progress-num=1,2 "Built target testpq"
+.PHONY : CMakeFiles/testpq.dir/all
 
 # Include target in all.
-all: CMakeFiles/DBtest.dir/all
+all: CMakeFiles/testpq.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/DBtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lifu/Documents/DBdriver/systest/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DBtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lifu/Documents/DBdriver/systest/build/CMakeFiles 0
-.PHONY : CMakeFiles/DBtest.dir/rule
+CMakeFiles/testpq.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lifu/Documents/DBdriver/pqtest/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testpq.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lifu/Documents/DBdriver/pqtest/build/CMakeFiles 0
+.PHONY : CMakeFiles/testpq.dir/rule
 
 # Convenience name for target.
-DBtest: CMakeFiles/DBtest.dir/rule
+testpq: CMakeFiles/testpq.dir/rule
 
-.PHONY : DBtest
-
-# clean rule for target.
-CMakeFiles/DBtest.dir/clean:
-	$(MAKE) -f CMakeFiles/DBtest.dir/build.make CMakeFiles/DBtest.dir/clean
-.PHONY : CMakeFiles/DBtest.dir/clean
+.PHONY : testpq
 
 # clean rule for target.
-clean: CMakeFiles/DBtest.dir/clean
+CMakeFiles/testpq.dir/clean:
+	$(MAKE) -f CMakeFiles/testpq.dir/build.make CMakeFiles/testpq.dir/clean
+.PHONY : CMakeFiles/testpq.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/testpq.dir/clean
 
 .PHONY : clean
 

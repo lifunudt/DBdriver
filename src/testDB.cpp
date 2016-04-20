@@ -6,12 +6,12 @@
  ************************************************************************/
 
 #include <iostream>
-#include "DBdriverpgsql.h"
+#include "DBdriverpq.h"
 
 using namespace std;
 
 int main() {
-    DBdriverpgsql db;
+    DBdriverpq db;
     db.connectDatabaseQuery("", 0 );
     return 0;
 }

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/lifu/Documents/DBdriver/systest
+# Install script for directory: /Users/lifu/Documents/DBdriver/pqtest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/lifu/Documents/DBdriver/systest/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/lifu/Documents/DBdriver/pqtest/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
