@@ -26,7 +26,7 @@ bool DBdriverpq::connectDatabaseQuery(const std::string &url, bool overwirtten )
     if ( url != "" )
         conn_pq_info = url.c_str();
     else{
-        conn_pq_info = "hostaddr = 127.0.0.1 port = 5432 dbname = postgres user = postgres password = liguangye";
+        conn_pq_info = "hostaddr = 127.0.0.1 port = 5432 dbname = testdb user = postgres password = liguangye";
     } 
     conn_pq = PQconnectdb( conn_pq_info );
     if( PQstatus( conn_pq ) != CONNECTION_OK  ) {
@@ -58,6 +58,9 @@ void DBdriverpq::executeNoResultQuery(const std::string & sql) {
     if( isConnectedQuery()== CONNECTION_OK )
     {
         PQexec( conn_pq, sql.c_str() );
+    }
+    else {
+        printf("-DBdriverpq::executeNoResultQuery: no connection to the database\n");
     }
 }
 
