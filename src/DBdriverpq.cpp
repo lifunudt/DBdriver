@@ -48,3 +48,16 @@ bool DBdriverpq::disconnectDatabaseQuery(){
     printf("exit from the PQDB\n");
     return 1;
 }
+
+bool DBdriverpq::isConnectedQuery() {
+    //return the status of the connect 
+    return PQstatus( conn_pq );
+
+}
+void DBdriverpq::executeNoResultQuery(const std::string & sql) {
+    if( isConnectedQuery()== CONNECTION_OK )
+    {
+        PQexec( conn_pq, sql.c_str() );
+    }
+}
+

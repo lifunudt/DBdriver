@@ -21,6 +21,8 @@ public:
     ~DBdriverpq();
     virtual bool connectDatabaseQuery(const std::string & url, bool overwirtten = false);
     virtual bool disconnectDatabaseQuery();
+    virtual bool isConnectedQuery();
+    virtual void executeNoResultQuery(const std::string & sql);
 private:
    const char * conn_pq_info;
    PGconn * conn_pq;
