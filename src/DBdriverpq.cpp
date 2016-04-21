@@ -38,5 +38,13 @@ bool DBdriverpq::connectDatabaseQuery(const std::string &url, bool overwirtten )
         return true;
     }
 }   
-   
 
+bool DBdriverpq::disconnectDatabaseQuery(){
+    //TODO:make sure that all statement are finished
+
+    //TODO:put the data in memory to pgdb
+
+    PQfinish(conn_pq);
+    printf("exit from the PQDB\n");
+    return 1;
+}

@@ -13,5 +13,6 @@ using namespace std;
 int main() {
     DBdriverpq db;
     db.connectDatabaseQuery("", 0 );
+    db.disconnectDatabaseQuery();
     return 0;
 }
