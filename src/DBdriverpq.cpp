@@ -63,4 +63,99 @@ void DBdriverpq::executeNoResultQuery(const std::string & sql) {
         printf("-DBdriverpq::executeNoResultQuery: no connection to the database\n");
     }
 }
+long DBdriverpq::getMemoryUsedQuery() {
+    
+}
+bool DBdriverpq::getDatabaseVersionQuery(std::string & version){
+
+}
+long DBdriverpq::getImagesMemoryUsedQuery() {
+
+}
+long DBdriverpq::getDepthImagesMemoryUsedQuery(){
+
+}
+long DBdriverpq::getLaserScansMemoryUsedQuery() {
+
+}
+long DBdriverpq::getUserDataMemoryUsedQuery(){
+
+}
+long DBdriverpq::getWordsMemoryUsedQuery(){
+
+}
+int DBdriverpq::getLastNodesSizeQuery() {
+    
+}
+int DBdriverpq::getLastDictionarySizeQuery(){
+
+}
+int DBdriverpq::getTotalNodesSizeQuery(){
+
+}
+int DBdriverpq::getTotalDictionarySizeQuery(){
+    
+}
+void DBdriverpq::getWeightQuery(int signatureId, int & weight){
+
+}
+void DBdriverpq::saveQuery(  std::list<Signature *> & signatures){
+
+}
+void DBdriverpq::saveQuery(  std::list<VisualWord *> & words){
+    
+}
+void DBdriverpq::updateQuery(  std::list<Signature *> & signatures, bool updateTimestamp){
+
+}
+void DBdriverpq::updateQuery(  std::list<VisualWord *> & words, bool updateTimestamp){
+
+}
+void DBdriverpq::addLinkQuery(  Link & link){
+    
+}
+void DBdriverpq::updateLinkQuery(  Link & link) {
+
+}
+    // Load objects
+void DBdriverpq::loadQuery(VWDictionary * dictionary){
+    
+}
+void DBdriverpq::loadLastNodesQuery(std::list<Signature *> & signatures){
+
+}
+void DBdriverpq::loadSignaturesQuery(  std::list<int> & ids, std::list<Signature *> & signatures){
+
+}
+void DBdriverpq::loadWordsQuery(  std::set<int> & wordIds, std::list<VisualWord *> & vws){
+    
+}
+void DBdriverpq::loadLinksQuery(int signatureId, std::map<int, Link> & links, Link::Type type = Link::kUndef){
+
+}
+void DBdriverpq::loadNodeDataQuery(std::list<Signature *> & signatures) {
+
+}
+bool DBdriverpq::getNodeInfoQuery(int signatureId, Transform & pose, int & mapId, int & weight, std::string & label, double & stamp){
+    
+}
+void DBdriverpq::getAllNodeIdsQuery(std::set<int> & ids, bool ignoreChildren, bool ignoreBadSignatures) {
+
+}
+void DBdriverpq::getAllLinksQuery(std::multimap<int, Link> & links, bool ignoreNullLinks){
+
+}
+void DBdriverpq::getLastIdQuery(  std::string & tableName, int & id){
+    
+}
+void DBdriverpq::getInvertedIndexNiQuery(int signatureId, int & ni) {
+
+}
+void DBdriverpq::getNodeIdByLabelQuery(  std::string & label, int & id) {
+
+}
+void DBdriverpq::getAllLabelsQuery(std::map<int, std::string> & labels) {
+    
+}
+
 

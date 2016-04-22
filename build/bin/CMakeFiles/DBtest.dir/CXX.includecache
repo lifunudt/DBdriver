@@ -9,6 +9,12 @@
 ../include/DBdriverpq.h
 iostream
 -
+list
+-
+set
+-
+map
+-
 cstring
 -
 libpq-fe.h
