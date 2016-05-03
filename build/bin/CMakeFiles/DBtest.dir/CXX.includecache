@@ -45,6 +45,8 @@ DBdriverpq.h
 /Users/lifu/Documents/DBdriver/src/testDB.cpp
 iostream
 -
+string
+-
 DBdriverpq.h
 /Users/lifu/Documents/DBdriver/src/DBdriverpq.h
 

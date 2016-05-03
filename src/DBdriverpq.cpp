@@ -11,7 +11,7 @@
 using namespace std;
 
 DBdriverpq::DBdriverpq() {
-
+    conn_pq_info = new char[100];
 }
 
 DBdriverpq::~DBdriverpq() {
@@ -31,7 +31,7 @@ bool DBdriverpq::connectDatabaseQuery(  const std::string &url, bool overwirtten
         strcpy( conn_pq_info , default_con.c_str() );
         //cout<<"default:"<<default_con.c_str() <<endl;
         //cout<<"conn_pq:"<<conn_pq_info<<endl;
-    } 
+    }
     conn_pq = PQconnectdb( conn_pq_info );
     if( PQstatus( conn_pq ) != CONNECTION_OK  ) {
         printf( "connect error! \n" );
@@ -68,11 +68,17 @@ void DBdriverpq::executeNoResultQuery( std::string & sql) {
     }
 }
 long DBdriverpq::getMemoryUsedQuery() {
-   return 0; 
+   
+    return 0; 
 }
 bool DBdriverpq::getDatabaseVersionQuery(std::string & version){
-
-   return 0; 
+    char paramName[ 50 ] = "server_version";
+    version = "";
+    version = PQparameterStatus( conn_pq, paramName );
+    if ( version == "")
+        return false;
+    else 
+        return true;
 }
 long DBdriverpq::getImagesMemoryUsedQuery() {
 
