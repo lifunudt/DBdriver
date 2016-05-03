@@ -15,6 +15,7 @@
 #include <map>
 #include <cstring>
 #include "libpq-fe.h"
+#include "datatype.h"
 
 using namespace std;
 
@@ -22,7 +23,7 @@ class DBdriverpq {
 public:
     DBdriverpq();
     ~DBdriverpq();
-    virtual bool connectDatabaseQuery(  std::string & url, bool overwirtten = false);
+    virtual bool connectDatabaseQuery(  const std::string & url, bool overwirtten = false);
     virtual bool disconnectDatabaseQuery();
     virtual bool isConnectedQuery();
     virtual void executeNoResultQuery(  std::string & sql);
@@ -50,7 +51,7 @@ public:
     virtual void loadLastNodesQuery(std::list<Signature *> & signatures)  ;
     virtual void loadSignaturesQuery(  std::list<int> & ids, std::list<Signature *> & signatures)  ;
     virtual void loadWordsQuery(  std::set<int> & wordIds, std::list<VisualWord *> & vws)  ;
-    virtual void loadLinksQuery(int signatureId, std::map<int, Link> & links, Link::Type type = Link::kUndef)  ;
+    virtual void loadLinksQuery(int signatureId, std::map<int, Link> & links) ; //, Link::Type type = Link::kUndef)  ;
     virtual void loadNodeDataQuery(std::list<Signature *> & signatures)  ;
     virtual bool getNodeInfoQuery(int signatureId, Transform & pose, int & mapId, int & weight, std::string & label, double & stamp)  ;
     virtual void getAllNodeIdsQuery(std::set<int> & ids, bool ignoreChildren, bool ignoreBadSignatures)  ;
@@ -61,6 +62,6 @@ public:
     virtual void getAllLabelsQuery(std::map<int, std::string> & labels)  ;
 
 private:
-     char * conn_pq_info;
-   PGconn * conn_pq;
+    char * conn_pq_info;
+    PGconn * conn_pq;
 };

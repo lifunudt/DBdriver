@@ -22,11 +22,15 @@ DBdriverpq::~DBdriverpq() {
  *@param:
  *@return:
  */
-bool DBdriverpq::connectDatabaseQuery(const std::string &url, bool overwirtten ) {
-    if ( url != "" )
-        conn_pq_info = url.c_str();
+bool DBdriverpq::connectDatabaseQuery(  const std::string &url, bool overwirtten ) {
+    std::string default_con = "hostaddr = 127.0.0.1 port = 5432 dbname = testdb user = postgres password = liguangye";
+    if ( url != "" ) {
+        strcpy( conn_pq_info , url.c_str());
+    }
     else{
-        conn_pq_info = "hostaddr = 127.0.0.1 port = 5432 dbname = testdb user = postgres password = liguangye";
+        strcpy( conn_pq_info , default_con.c_str() );
+        //cout<<"default:"<<default_con.c_str() <<endl;
+        //cout<<"conn_pq:"<<conn_pq_info<<endl;
     } 
     conn_pq = PQconnectdb( conn_pq_info );
     if( PQstatus( conn_pq ) != CONNECTION_OK  ) {
@@ -54,7 +58,7 @@ bool DBdriverpq::isConnectedQuery() {
     return PQstatus( conn_pq );
 
 }
-void DBdriverpq::executeNoResultQuery(const std::string & sql) {
+void DBdriverpq::executeNoResultQuery( std::string & sql) {
     if( isConnectedQuery()== CONNECTION_OK )
     {
         PQexec( conn_pq, sql.c_str() );
@@ -64,37 +68,47 @@ void DBdriverpq::executeNoResultQuery(const std::string & sql) {
     }
 }
 long DBdriverpq::getMemoryUsedQuery() {
-    
+   return 0; 
 }
 bool DBdriverpq::getDatabaseVersionQuery(std::string & version){
 
+   return 0; 
 }
 long DBdriverpq::getImagesMemoryUsedQuery() {
 
+   return 0; 
 }
 long DBdriverpq::getDepthImagesMemoryUsedQuery(){
 
+   return 0; 
 }
 long DBdriverpq::getLaserScansMemoryUsedQuery() {
 
+   return 0; 
 }
 long DBdriverpq::getUserDataMemoryUsedQuery(){
 
+   return 0; 
 }
 long DBdriverpq::getWordsMemoryUsedQuery(){
 
+   return 0; 
 }
 int DBdriverpq::getLastNodesSizeQuery() {
     
+   return 0; 
 }
 int DBdriverpq::getLastDictionarySizeQuery(){
 
+   return 0; 
 }
 int DBdriverpq::getTotalNodesSizeQuery(){
 
+   return 0; 
 }
 int DBdriverpq::getTotalDictionarySizeQuery(){
     
+   return 0;
 }
 void DBdriverpq::getWeightQuery(int signatureId, int & weight){
 
@@ -130,7 +144,9 @@ void DBdriverpq::loadSignaturesQuery(  std::list<int> & ids, std::list<Signature
 void DBdriverpq::loadWordsQuery(  std::set<int> & wordIds, std::list<VisualWord *> & vws){
     
 }
-void DBdriverpq::loadLinksQuery(int signatureId, std::map<int, Link> & links, Link::Type type = Link::kUndef){
+void DBdriverpq::loadLinksQuery(int signatureId, std::map<int, Link> & links) { 
+    //TODO:changed the param
+    //, Link::Type type = Link::kUndef){
 
 }
 void DBdriverpq::loadNodeDataQuery(std::list<Signature *> & signatures) {
@@ -138,6 +154,7 @@ void DBdriverpq::loadNodeDataQuery(std::list<Signature *> & signatures) {
 }
 bool DBdriverpq::getNodeInfoQuery(int signatureId, Transform & pose, int & mapId, int & weight, std::string & label, double & stamp){
     
+   return 0;
 }
 void DBdriverpq::getAllNodeIdsQuery(std::set<int> & ids, bool ignoreChildren, bool ignoreBadSignatures) {
 

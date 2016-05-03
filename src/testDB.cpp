@@ -12,7 +12,10 @@ using namespace std;
 
 int main() {
     DBdriverpq db;
-    db.connectDatabaseQuery("", 0 );
+   // std::string url = "";
+
+    db.connectDatabaseQuery( "", 0 );
+    
     printf( "the connect stats is : %d\n",(int)db.isConnectedQuery());
     
     std::string sql = " create table testnoresultexe ( id int primary key, age int ) ;";

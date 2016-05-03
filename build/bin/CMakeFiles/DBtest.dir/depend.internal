@@ -3,9 +3,11 @@
 
 bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o
  ../include/DBdriverpq.h
+ ../include/datatype.h
  ../include/libpq-fe.h
  /Users/lifu/Documents/DBdriver/src/DBdriverpq.cpp
 bin/CMakeFiles/DBtest.dir/testDB.cpp.o
  ../include/DBdriverpq.h
+ ../include/datatype.h
  ../include/libpq-fe.h
  /Users/lifu/Documents/DBdriver/src/testDB.cpp

@@ -19,6 +19,16 @@ cstring
 -
 libpq-fe.h
 ../include/libpq-fe.h
+datatype.h
+../include/datatype.h
+
+../include/datatype.h
+iostream
+-
+cstring
+-
+cmath
+-
 
 ../include/libpq-fe.h
 stdio.h
