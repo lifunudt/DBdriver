@@ -37,6 +37,8 @@ postgres_ext.h
 ../include/postgres_ext.h
 
 /Users/lifu/Documents/DBdriver/src/DBdriverpq.cpp
+sstream
+-
 iostream
 -
 DBdriverpq.h

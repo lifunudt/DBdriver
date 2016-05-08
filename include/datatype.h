@@ -16,7 +16,8 @@
 using namespace std;
 
 struct Signature {
-    int Sid;
+    
+    int id;
 };
 struct VisualWord {
     int VWid;

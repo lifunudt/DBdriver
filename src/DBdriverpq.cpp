@@ -4,8 +4,8 @@
 	> Mail: lifunudt@163.cpp
 	> Created Time: 二  4/19 20:22:20 2016
  ************************************************************************/
-
-#include<iostream>
+#include <sstream>
+#include <iostream>
 #include "DBdriverpq.h"
 
 using namespace std;
@@ -29,8 +29,6 @@ bool DBdriverpq::connectDatabaseQuery(  const std::string &url, bool overwirtten
     }
     else{
         strcpy( conn_pq_info , default_con.c_str() );
-        //cout<<"default:"<<default_con.c_str() <<endl;
-        //cout<<"conn_pq:"<<conn_pq_info<<endl;
     }
     conn_pq = PQconnectdb( conn_pq_info );
     if( PQstatus( conn_pq ) != CONNECTION_OK  ) {
@@ -74,34 +72,39 @@ long DBdriverpq::getMemoryUsedQuery() {
 bool DBdriverpq::getDatabaseVersionQuery(std::string & version){
     char paramName[ 50 ] = "server_version";
     version = "";
-    version = PQparameterStatus( conn_pq, paramName );
-    if ( version == "")
-        return false;
-    else 
-        return true;
+    if ( isConnectedQuery() == CONNECTION_OK  ) {
+        version = PQparameterStatus( conn_pq, paramName );
+    }
+    else {
+        printf("-DBdriverpq::getDatabaseVersionQuery: no connection to the database\n");       
+    }
+    return version == "";
 }
 long DBdriverpq::getImagesMemoryUsedQuery() {
-
+   //TODO
    return 0; 
 }
 long DBdriverpq::getDepthImagesMemoryUsedQuery(){
-
+    //TODO
    return 0; 
 }
 long DBdriverpq::getLaserScansMemoryUsedQuery() {
-
+    //TODO
    return 0; 
 }
 long DBdriverpq::getUserDataMemoryUsedQuery(){
+    //TODO
 
    return 0; 
 }
 long DBdriverpq::getWordsMemoryUsedQuery(){
+    //TODO
 
    return 0; 
 }
 int DBdriverpq::getLastNodesSizeQuery() {
-    
+    //TODO
+
    return 0; 
 }
 int DBdriverpq::getLastDictionarySizeQuery(){
@@ -137,7 +140,7 @@ void DBdriverpq::addLinkQuery(  Link & link){
 void DBdriverpq::updateLinkQuery(  Link & link) {
 
 }
-    // Load objects
+// Load objects
 void DBdriverpq::loadQuery(VWDictionary * dictionary){
     
 }
@@ -155,9 +158,39 @@ void DBdriverpq::loadLinksQuery(int signatureId, std::map<int, Link> & links) {
     //, Link::Type type = Link::kUndef){
 
 }
+
+/*
+ *@param: std::list<Signature *>
+ *@func: from the database load the signatures acording the signatureIds 
+ */
 void DBdriverpq::loadNodeDataQuery(std::list<Signature *> & signatures) {
+    
+    if( !isConnectedQuery() ) {
+        printf( "-DBdriverpq::loadNodeDataQuery : no database conncection\n" );
+        return ;
+    }
+
+    const char pqstmt[] = "loadNodeDataQuery"; 
+    std::stringstream query;
+    query << "SELECT image, depth, calibration, scan_max_pts, scan_max_range, scan, user_data  "
+        << "FROM data "
+        << "WHERE id = $1 "
+        << ";";
+    PGresult *res;
+    int nParams = 1;
+    res = PQprepare(conn_pq, pqstmt, query.str().c_str(), nParams, NULL );
+    const void * data = 0;
+    int dataSize = 0;
+    int index = 0;
+
+    //for every signature in the Signatures, get its data from the db
+    for(std::list<Signature*>::iterator iter = signatures.begin(); iter!=signatures.end(); ++iter) {
+        
+    }
+
 
 }
+
 bool DBdriverpq::getNodeInfoQuery(int signatureId, Transform & pose, int & mapId, int & weight, std::string & label, double & stamp){
     
    return 0;
