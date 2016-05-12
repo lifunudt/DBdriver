@@ -105,19 +105,149 @@ bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.provides: bin/CMakeFiles/DBtest.dir/D
 bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o
 
 
+bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o: bin/CMakeFiles/DBtest.dir/flags.make
+bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o: ../src/CameraModel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBtest.dir/CameraModel.cpp.o -c /Users/lifu/Documents/DBdriver/src/CameraModel.cpp
+
+bin/CMakeFiles/DBtest.dir/CameraModel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBtest.dir/CameraModel.cpp.i"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lifu/Documents/DBdriver/src/CameraModel.cpp > CMakeFiles/DBtest.dir/CameraModel.cpp.i
+
+bin/CMakeFiles/DBtest.dir/CameraModel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBtest.dir/CameraModel.cpp.s"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lifu/Documents/DBdriver/src/CameraModel.cpp -o CMakeFiles/DBtest.dir/CameraModel.cpp.s
+
+bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o.requires:
+
+.PHONY : bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o.requires
+
+bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o.provides: bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o.provides
+
+bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o
+
+
+bin/CMakeFiles/DBtest.dir/Link.cpp.o: bin/CMakeFiles/DBtest.dir/flags.make
+bin/CMakeFiles/DBtest.dir/Link.cpp.o: ../src/Link.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object bin/CMakeFiles/DBtest.dir/Link.cpp.o"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBtest.dir/Link.cpp.o -c /Users/lifu/Documents/DBdriver/src/Link.cpp
+
+bin/CMakeFiles/DBtest.dir/Link.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBtest.dir/Link.cpp.i"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lifu/Documents/DBdriver/src/Link.cpp > CMakeFiles/DBtest.dir/Link.cpp.i
+
+bin/CMakeFiles/DBtest.dir/Link.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBtest.dir/Link.cpp.s"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lifu/Documents/DBdriver/src/Link.cpp -o CMakeFiles/DBtest.dir/Link.cpp.s
+
+bin/CMakeFiles/DBtest.dir/Link.cpp.o.requires:
+
+.PHONY : bin/CMakeFiles/DBtest.dir/Link.cpp.o.requires
+
+bin/CMakeFiles/DBtest.dir/Link.cpp.o.provides: bin/CMakeFiles/DBtest.dir/Link.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Link.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/DBtest.dir/Link.cpp.o.provides
+
+bin/CMakeFiles/DBtest.dir/Link.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/Link.cpp.o
+
+
+bin/CMakeFiles/DBtest.dir/SensorData.cpp.o: bin/CMakeFiles/DBtest.dir/flags.make
+bin/CMakeFiles/DBtest.dir/SensorData.cpp.o: ../src/SensorData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object bin/CMakeFiles/DBtest.dir/SensorData.cpp.o"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBtest.dir/SensorData.cpp.o -c /Users/lifu/Documents/DBdriver/src/SensorData.cpp
+
+bin/CMakeFiles/DBtest.dir/SensorData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBtest.dir/SensorData.cpp.i"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lifu/Documents/DBdriver/src/SensorData.cpp > CMakeFiles/DBtest.dir/SensorData.cpp.i
+
+bin/CMakeFiles/DBtest.dir/SensorData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBtest.dir/SensorData.cpp.s"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lifu/Documents/DBdriver/src/SensorData.cpp -o CMakeFiles/DBtest.dir/SensorData.cpp.s
+
+bin/CMakeFiles/DBtest.dir/SensorData.cpp.o.requires:
+
+.PHONY : bin/CMakeFiles/DBtest.dir/SensorData.cpp.o.requires
+
+bin/CMakeFiles/DBtest.dir/SensorData.cpp.o.provides: bin/CMakeFiles/DBtest.dir/SensorData.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/SensorData.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/DBtest.dir/SensorData.cpp.o.provides
+
+bin/CMakeFiles/DBtest.dir/SensorData.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/SensorData.cpp.o
+
+
+bin/CMakeFiles/DBtest.dir/Signature.cpp.o: bin/CMakeFiles/DBtest.dir/flags.make
+bin/CMakeFiles/DBtest.dir/Signature.cpp.o: ../src/Signature.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object bin/CMakeFiles/DBtest.dir/Signature.cpp.o"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBtest.dir/Signature.cpp.o -c /Users/lifu/Documents/DBdriver/src/Signature.cpp
+
+bin/CMakeFiles/DBtest.dir/Signature.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBtest.dir/Signature.cpp.i"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lifu/Documents/DBdriver/src/Signature.cpp > CMakeFiles/DBtest.dir/Signature.cpp.i
+
+bin/CMakeFiles/DBtest.dir/Signature.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBtest.dir/Signature.cpp.s"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lifu/Documents/DBdriver/src/Signature.cpp -o CMakeFiles/DBtest.dir/Signature.cpp.s
+
+bin/CMakeFiles/DBtest.dir/Signature.cpp.o.requires:
+
+.PHONY : bin/CMakeFiles/DBtest.dir/Signature.cpp.o.requires
+
+bin/CMakeFiles/DBtest.dir/Signature.cpp.o.provides: bin/CMakeFiles/DBtest.dir/Signature.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Signature.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/DBtest.dir/Signature.cpp.o.provides
+
+bin/CMakeFiles/DBtest.dir/Signature.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/Signature.cpp.o
+
+
+bin/CMakeFiles/DBtest.dir/Transform.cpp.o: bin/CMakeFiles/DBtest.dir/flags.make
+bin/CMakeFiles/DBtest.dir/Transform.cpp.o: ../src/Transform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object bin/CMakeFiles/DBtest.dir/Transform.cpp.o"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBtest.dir/Transform.cpp.o -c /Users/lifu/Documents/DBdriver/src/Transform.cpp
+
+bin/CMakeFiles/DBtest.dir/Transform.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBtest.dir/Transform.cpp.i"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lifu/Documents/DBdriver/src/Transform.cpp > CMakeFiles/DBtest.dir/Transform.cpp.i
+
+bin/CMakeFiles/DBtest.dir/Transform.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBtest.dir/Transform.cpp.s"
+	cd /Users/lifu/Documents/DBdriver/build/bin && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lifu/Documents/DBdriver/src/Transform.cpp -o CMakeFiles/DBtest.dir/Transform.cpp.s
+
+bin/CMakeFiles/DBtest.dir/Transform.cpp.o.requires:
+
+.PHONY : bin/CMakeFiles/DBtest.dir/Transform.cpp.o.requires
+
+bin/CMakeFiles/DBtest.dir/Transform.cpp.o.provides: bin/CMakeFiles/DBtest.dir/Transform.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Transform.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/DBtest.dir/Transform.cpp.o.provides
+
+bin/CMakeFiles/DBtest.dir/Transform.cpp.o.provides.build: bin/CMakeFiles/DBtest.dir/Transform.cpp.o
+
+
 # Object files for target DBtest
 DBtest_OBJECTS = \
 "CMakeFiles/DBtest.dir/testDB.cpp.o" \
-"CMakeFiles/DBtest.dir/DBdriverpq.cpp.o"
+"CMakeFiles/DBtest.dir/DBdriverpq.cpp.o" \
+"CMakeFiles/DBtest.dir/CameraModel.cpp.o" \
+"CMakeFiles/DBtest.dir/Link.cpp.o" \
+"CMakeFiles/DBtest.dir/SensorData.cpp.o" \
+"CMakeFiles/DBtest.dir/Signature.cpp.o" \
+"CMakeFiles/DBtest.dir/Transform.cpp.o"
 
 # External object files for target DBtest
 DBtest_EXTERNAL_OBJECTS =
 
 ../bin/DBtest: bin/CMakeFiles/DBtest.dir/testDB.cpp.o
 ../bin/DBtest: bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o
+../bin/DBtest: bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o
+../bin/DBtest: bin/CMakeFiles/DBtest.dir/Link.cpp.o
+../bin/DBtest: bin/CMakeFiles/DBtest.dir/SensorData.cpp.o
+../bin/DBtest: bin/CMakeFiles/DBtest.dir/Signature.cpp.o
+../bin/DBtest: bin/CMakeFiles/DBtest.dir/Transform.cpp.o
 ../bin/DBtest: bin/CMakeFiles/DBtest.dir/build.make
 ../bin/DBtest: bin/CMakeFiles/DBtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/DBtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lifu/Documents/DBdriver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../../bin/DBtest"
 	cd /Users/lifu/Documents/DBdriver/build/bin && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DBtest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +257,11 @@ bin/CMakeFiles/DBtest.dir/build: ../bin/DBtest
 
 bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/testDB.cpp.o.requires
 bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.o.requires
+bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o.requires
+bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/Link.cpp.o.requires
+bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/SensorData.cpp.o.requires
+bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/Signature.cpp.o.requires
+bin/CMakeFiles/DBtest.dir/requires: bin/CMakeFiles/DBtest.dir/Transform.cpp.o.requires
 
 .PHONY : bin/CMakeFiles/DBtest.dir/requires
 

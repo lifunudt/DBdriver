@@ -61,6 +61,11 @@ public:
     virtual void getNodeIdByLabelQuery(  std::string & label, int & id)  ;
     virtual void getAllLabelsQuery(std::map<int, std::string> & labels)  ;
 
+
+private:
+    std::string queryStepNode();
+    PGresult *stepNode( const char pqstmt[], Signature *s );
+
 private:
     char * conn_pq_info;
     PGconn * conn_pq;

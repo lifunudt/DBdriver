@@ -125,6 +125,33 @@ DBtest/fast:
 	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/build
 .PHONY : DBtest/fast
 
+CameraModel.o: CameraModel.cpp.o
+
+.PHONY : CameraModel.o
+
+# target to build an object file
+CameraModel.cpp.o:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/CameraModel.cpp.o
+.PHONY : CameraModel.cpp.o
+
+CameraModel.i: CameraModel.cpp.i
+
+.PHONY : CameraModel.i
+
+# target to preprocess a source file
+CameraModel.cpp.i:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/CameraModel.cpp.i
+.PHONY : CameraModel.cpp.i
+
+CameraModel.s: CameraModel.cpp.s
+
+.PHONY : CameraModel.s
+
+# target to generate assembly for a file
+CameraModel.cpp.s:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/CameraModel.cpp.s
+.PHONY : CameraModel.cpp.s
+
 DBdriverpq.o: DBdriverpq.cpp.o
 
 .PHONY : DBdriverpq.o
@@ -151,6 +178,114 @@ DBdriverpq.s: DBdriverpq.cpp.s
 DBdriverpq.cpp.s:
 	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/DBdriverpq.cpp.s
 .PHONY : DBdriverpq.cpp.s
+
+Link.o: Link.cpp.o
+
+.PHONY : Link.o
+
+# target to build an object file
+Link.cpp.o:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Link.cpp.o
+.PHONY : Link.cpp.o
+
+Link.i: Link.cpp.i
+
+.PHONY : Link.i
+
+# target to preprocess a source file
+Link.cpp.i:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Link.cpp.i
+.PHONY : Link.cpp.i
+
+Link.s: Link.cpp.s
+
+.PHONY : Link.s
+
+# target to generate assembly for a file
+Link.cpp.s:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Link.cpp.s
+.PHONY : Link.cpp.s
+
+SensorData.o: SensorData.cpp.o
+
+.PHONY : SensorData.o
+
+# target to build an object file
+SensorData.cpp.o:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/SensorData.cpp.o
+.PHONY : SensorData.cpp.o
+
+SensorData.i: SensorData.cpp.i
+
+.PHONY : SensorData.i
+
+# target to preprocess a source file
+SensorData.cpp.i:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/SensorData.cpp.i
+.PHONY : SensorData.cpp.i
+
+SensorData.s: SensorData.cpp.s
+
+.PHONY : SensorData.s
+
+# target to generate assembly for a file
+SensorData.cpp.s:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/SensorData.cpp.s
+.PHONY : SensorData.cpp.s
+
+Signature.o: Signature.cpp.o
+
+.PHONY : Signature.o
+
+# target to build an object file
+Signature.cpp.o:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Signature.cpp.o
+.PHONY : Signature.cpp.o
+
+Signature.i: Signature.cpp.i
+
+.PHONY : Signature.i
+
+# target to preprocess a source file
+Signature.cpp.i:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Signature.cpp.i
+.PHONY : Signature.cpp.i
+
+Signature.s: Signature.cpp.s
+
+.PHONY : Signature.s
+
+# target to generate assembly for a file
+Signature.cpp.s:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Signature.cpp.s
+.PHONY : Signature.cpp.s
+
+Transform.o: Transform.cpp.o
+
+.PHONY : Transform.o
+
+# target to build an object file
+Transform.cpp.o:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Transform.cpp.o
+.PHONY : Transform.cpp.o
+
+Transform.i: Transform.cpp.i
+
+.PHONY : Transform.i
+
+# target to preprocess a source file
+Transform.cpp.i:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Transform.cpp.i
+.PHONY : Transform.cpp.i
+
+Transform.s: Transform.cpp.s
+
+.PHONY : Transform.s
+
+# target to generate assembly for a file
+Transform.cpp.s:
+	cd /Users/lifu/Documents/DBdriver/build && $(MAKE) -f bin/CMakeFiles/DBtest.dir/build.make bin/CMakeFiles/DBtest.dir/Transform.cpp.s
+.PHONY : Transform.cpp.s
 
 testDB.o: testDB.cpp.o
 
@@ -188,9 +323,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DBtest"
+	@echo "... CameraModel.o"
+	@echo "... CameraModel.i"
+	@echo "... CameraModel.s"
 	@echo "... DBdriverpq.o"
 	@echo "... DBdriverpq.i"
 	@echo "... DBdriverpq.s"
+	@echo "... Link.o"
+	@echo "... Link.i"
+	@echo "... Link.s"
+	@echo "... SensorData.o"
+	@echo "... SensorData.i"
+	@echo "... SensorData.s"
+	@echo "... Signature.o"
+	@echo "... Signature.i"
+	@echo "... Signature.s"
+	@echo "... Transform.o"
+	@echo "... Transform.i"
+	@echo "... Transform.s"
 	@echo "... testDB.o"
 	@echo "... testDB.i"
 	@echo "... testDB.s"

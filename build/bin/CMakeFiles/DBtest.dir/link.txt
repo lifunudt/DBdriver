@@ -1,1 +1,1 @@
-g++   -lpqxx -lpq -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/DBtest.dir/testDB.cpp.o CMakeFiles/DBtest.dir/DBdriverpq.cpp.o  -o ../../bin/DBtest  
+g++   -lpqxx -lpq -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/DBtest.dir/testDB.cpp.o CMakeFiles/DBtest.dir/DBdriverpq.cpp.o CMakeFiles/DBtest.dir/CameraModel.cpp.o CMakeFiles/DBtest.dir/Link.cpp.o CMakeFiles/DBtest.dir/SensorData.cpp.o CMakeFiles/DBtest.dir/Signature.cpp.o CMakeFiles/DBtest.dir/Transform.cpp.o  -o ../../bin/DBtest  

@@ -53,13 +53,15 @@ bool DBdriverpq::disconnectDatabaseQuery(){
 
 bool DBdriverpq::isConnectedQuery() {
     //return the status of the connect 
-    return PQstatus( conn_pq );
+    return PQstatus( conn_pq ) == CONNECTION_OK;
 
 }
 void DBdriverpq::executeNoResultQuery( std::string & sql) {
-    if( isConnectedQuery()== CONNECTION_OK )
+    if( isConnectedQuery() )
     {
         PQexec( conn_pq, sql.c_str() );
+        if ( strcmp ( PQerrorMessage( conn_pq ) , ""  ) == 1 )
+            cout <<"--DBdriverpq::executeNoResultQuery:  "<<PQerrorMessage( conn_pq )<<endl;
     }
     else {
         printf("-DBdriverpq::executeNoResultQuery: no connection to the database\n");
@@ -69,17 +71,27 @@ long DBdriverpq::getMemoryUsedQuery() {
    
     return 0; 
 }
+
+/*
+ *@param: version
+ *@func: used to get the version of the postgersql database  
+ */
 bool DBdriverpq::getDatabaseVersionQuery(std::string & version){
     char paramName[ 50 ] = "server_version";
     version = "";
-    if ( isConnectedQuery() == CONNECTION_OK  ) {
+    
+    if ( isConnectedQuery() ) {
+
+        //use the func to get the version of the postgresql
         version = PQparameterStatus( conn_pq, paramName );
-    }
-    else {
+    
+    } else {
         printf("-DBdriverpq::getDatabaseVersionQuery: no connection to the database\n");       
     }
+    
     return version == "";
 }
+
 long DBdriverpq::getImagesMemoryUsedQuery() {
    //TODO
    return 0; 
@@ -122,7 +134,57 @@ int DBdriverpq::getTotalDictionarySizeQuery(){
 void DBdriverpq::getWeightQuery(int signatureId, int & weight){
 
 }
+
+std::string DBdriverpq::queryStepNode() {
+    return "INSERT INTO Node(id, map_id, weight, pose, stamp, label) VALUES($1, $2, $3, $4, $5, $6)";
+}
+
+PGresult *DBdriverpq::stepNode( const char pqstmt[], Signature *s ) {
+    PGresult *res;
+
+
+    return res;
+} 
 void DBdriverpq::saveQuery(  std::list<Signature *> & signatures){
+    
+    cout<<"--Dbdriver::saveQuery: start"<<endl;
+    //there is no error
+    if ( isConnectedQuery() && signatures.size() ) {
+        
+        std::string type;
+        const char pqstmt[] = "saveQuery";
+        PGresult *res;
+        int nParams;
+
+        //Signature table
+        std::string query = queryStepNode();
+        nParams = 6;
+        res = PQprepare( conn_pq, pqstmt, query.c_str(), nParams, NULL );
+
+        for ( std::list<Signature *>::const_iterator i = signatures.begin(); i != signatures.end() ; i++ ) {
+            stepNode( pqstmt, *i );
+        }
+
+        PQclear( res );
+
+
+        //Link table
+        
+        query = queryStepLink();
+        for( std::list<Signature *>::const_iterator jter = signatures.begin(); jter != signatures.end(); ++jter ) {
+            
+        }
+
+    } else {
+        //error 
+        if ( !isConnectedQuery() )
+            cout<<"--DBdriverpq::saveQuery: no connection to the DB"<<endl;
+        else
+            cout<<"--DBdriverpq::saveQuery: there is no sigature"<<endl;
+    }
+    
+    cout<<"--Dbdriver::saveQuery: end"<<endl;
+
 
 }
 void DBdriverpq::saveQuery(  std::list<VisualWord *> & words){
@@ -164,31 +226,74 @@ void DBdriverpq::loadLinksQuery(int signatureId, std::map<int, Link> & links) {
  *@func: from the database load the signatures acording the signatureIds 
  */
 void DBdriverpq::loadNodeDataQuery(std::list<Signature *> & signatures) {
-    
+    PGresult *res;
+    const char * paramValues[1];
+    int paramLengths[1];
+    int paramFormats[1]; 
+    int nParams = 1;
+
     if( !isConnectedQuery() ) {
         printf( "-DBdriverpq::loadNodeDataQuery : no database conncection\n" );
         return ;
     }
 
     const char pqstmt[] = "loadNodeDataQuery"; 
+    
+    //generate the search SQL string
     std::stringstream query;
-    query << "SELECT image, depth, calibration, scan_max_pts, scan_max_range, scan, user_data  "
+    //query << "SELECT image, depth, calibration, scan_max_pts, scan_max_range, scan, user_data  "
+    query << "SELECT mapid, stamp, weight "
         << "FROM data "
         << "WHERE id = $1 "
         << ";";
-    PGresult *res;
-    int nParams = 1;
+    
+    //prepare the PQ exec use the SQL string 
+    nParams = 1;
+
     res = PQprepare(conn_pq, pqstmt, query.str().c_str(), nParams, NULL );
+    
+    cout <<  PQerrorMessage( conn_pq ) << endl;
+
     const void * data = 0;
     int dataSize = 0;
     int index = 0;
 
     //for every signature in the Signatures, get its data from the db
     for(std::list<Signature*>::iterator iter = signatures.begin(); iter!=signatures.end(); ++iter) {
+        std::stringstream param;
+        param << (*iter)->id;
+        paramValues[0] = param.str().c_str(); 
+        res = PQexecPrepared( conn_pq, pqstmt, nParams, paramValues, NULL, NULL, 0 );
         
+        // if occur some error
+        if ( PQresultStatus( res ) != PGRES_TUPLES_OK ) {
+            printf( "--DBdriverpq::loadNodeDataQuery: exec failed: %s\n", PQerrorMessage(conn_pq) );
+            PQclear( res );
+            //exit_nicely( conn_pq );
+            continue;
+        }
+        
+        //parse the exec result
+        
+        int ntuples = PQntuples( res );
+        int nfields = PQnfields( res );
+        
+        if ( ntuples > 1 ) {
+            printf("--DBdriverpq::loadNodeDataQuery: result have multy tuples\n");
+        }
+        else if ( ntuples < 1 ){
+            printf("--DBdriverpq::loadNodeDataQuery: result have no tuple\n");
+        }
+        else {
+            //paras the tuple to generate the new signature
+            Signature t_sig;
+            t_sig.id = (*iter)->id;
+            cout << "result is: \n";
+            for ( int i = 0; i < nfields; i++ )
+                cout << PQgetvalue( res, 0, i ) << endl;
+        }
     }
-
-
+    return ;
 }
 
 bool DBdriverpq::getNodeInfoQuery(int signatureId, Transform & pose, int & mapId, int & weight, std::string & label, double & stamp){

@@ -6,5 +6,5 @@ CXX_FLAGS = -lpqxx -lpq
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/lifu/Documents/DBdriver/include 
+CXX_INCLUDES = -I/Users/lifu/Documents/DBdriver/include -I/usr/local/include/opencv -I/usr/local/include 
 
